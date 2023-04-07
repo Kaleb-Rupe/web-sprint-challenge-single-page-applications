@@ -6,15 +6,13 @@ import Home from "./Components/Home";
 const App = () => {
   return (
     <div>
-      <header>
-        BloomTech Eats
-        <nav>
-          <Link to="/">Home</Link>&nbsp;
-          <Link id="order-pizza" to="pizza">
-            Order
-          </Link>
-        </nav>
-      </header>
+      BloomTech Eats
+      <nav>
+        <Link to="/">Home</Link>&nbsp;
+        <Link id="order-pizza" to="pizza">
+          Order
+        </Link>
+      </nav>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="pizza/*" element={<Form />} />
