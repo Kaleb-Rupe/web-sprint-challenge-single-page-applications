@@ -15,10 +15,10 @@ function Form(props) {
   return (
     <div>
       <h1>Build Your Own Pizza</h1>
-      <form>
+      <form id="pizza-form">
         <label>
           Build Your Own Pizza
-          <input />
+          <input id="name-input" type="text" name="name" />
         </label>
       </form>
     </div>
