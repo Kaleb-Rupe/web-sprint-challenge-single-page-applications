@@ -2,11 +2,27 @@ import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
 
 function Home(props) {
-  return <h2>Home</h2>;
+  return (
+    <div>
+      <h1>Your Favorite Food, Delivered While Coding</h1>
+      <button>Pizza?</button>
+      <h3>Food Delivery in Gothem City</h3>
+    </div>
+  );
 }
 
-function Order(props) {
-  return <h2>Order</h2>;
+function Form(props) {
+  return (
+    <div>
+      <h1>Build Your Own Pizza</h1>
+      <form>
+        <label>
+          Build Your Own Pizza
+          <input />
+        </label>
+      </form>
+    </div>
+  );
 }
 
 const App = () => {
@@ -15,11 +31,13 @@ const App = () => {
       <h1>BloomTech Eats</h1>
       <nav>
         <Link to="/">Home</Link>&nbsp;
-        <Link to="order">Order</Link>
+        <Link id="order-pizza" to="pizza">
+          Order
+        </Link>
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="order" element={<Order />} />
+        <Route path="pizza/*" element={<Form />} />
       </Routes>
     </div>
   );
