@@ -1,40 +1,20 @@
 import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
-
-function Home(props) {
-  return (
-    <div>
-      <h1>Your Favorite Food, Delivered While Coding</h1>
-      <button>Pizza?</button>
-      <h3>Food Delivery in Gothem City</h3>
-    </div>
-  );
-}
-
-function Form(props) {
-  return (
-    <div>
-      <h1>Build Your Own Pizza</h1>
-      <form id="pizza-form">
-        <label>
-          Build Your Own Pizza
-          <input id="name-input" type="text" name="name" />
-        </label>
-      </form>
-    </div>
-  );
-}
+import Form from "./Components/Form";
+import Home from "./Components/Home";
 
 const App = () => {
   return (
     <div>
-      <h1>BloomTech Eats</h1>
-      <nav>
-        <Link to="/">Home</Link>&nbsp;
-        <Link id="order-pizza" to="pizza">
-          Order
-        </Link>
-      </nav>
+      <header>
+        BloomTech Eats
+        <nav>
+          <Link to="/">Home</Link>&nbsp;
+          <Link id="order-pizza" to="pizza">
+            Order
+          </Link>
+        </nav>
+      </header>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="pizza/*" element={<Form />} />
