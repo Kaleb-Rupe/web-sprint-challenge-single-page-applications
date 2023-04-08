@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Toppings from "./Toppings";
 import OrderName from "./OrderName";
 import Size from "./Size";
