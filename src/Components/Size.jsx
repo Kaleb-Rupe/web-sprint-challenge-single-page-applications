@@ -7,7 +7,7 @@ export default function Size(props) {
 
   const onChange = (evt) => {
     setPizzaSize({ ...pizzaSize, [evt.target.name]: evt.target.value });
-    console.log(evt.target);
+    console.log(evt.target.size);
   };
 
   const onSubmit = (evt) => {
@@ -28,11 +28,11 @@ export default function Size(props) {
           value={pizzaSize.size}
           onChange={onChange}
         >
-          <option value="">--Select--</option>
-          <option value="10inch">10 Inch</option>
-          <option value="12inch">12 Inch</option>
-          <option value="16inch">16 Inch</option>
-          <option value="20inch">20 Inch</option>
+          <option value="select">--Select--</option>
+          <option value="tenInch">10 Inch</option>
+          <option value="twelveInch">12 Inch</option>
+          <option value="sixteenInch">16 Inch</option>
+          <option value="twentyInch">20 Inch</option>
         </select>
       </label>
     </form>

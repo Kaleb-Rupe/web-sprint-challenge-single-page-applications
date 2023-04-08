@@ -28,8 +28,8 @@ export default function Sauce(props) {
           <input
             name="sauce"
             type="radio"
-            value="option1"
-            checked={sauceChoice.sauce === "option1"}
+            value="originalRed"
+            checked={sauceChoice.sauce === "originalRed"}
             onChange={onChange}
           />
           Original Red
@@ -38,8 +38,8 @@ export default function Sauce(props) {
           <input
             name="sauce"
             type="radio"
-            value="option2"
-            checked={sauceChoice.sauce === "option2"}
+            value="garlicRanch"
+            checked={sauceChoice.sauce === "garlicRanch"}
             onChange={onChange}
           />
           Garlic Ranch
@@ -48,8 +48,8 @@ export default function Sauce(props) {
           <input
             name="sauce"
             type="radio"
-            value="option3"
-            checked={sauceChoice.sauce === "option3"}
+            value="bbqSauce"
+            checked={sauceChoice.sauce === "bbqSauce"}
             onChange={onChange}
           />
           BBQ Sauce
@@ -58,8 +58,8 @@ export default function Sauce(props) {
           <input
             name="sauce"
             type="radio"
-            value="option4"
-            checked={sauceChoice.sauce === "option4"}
+            value="spinachAlfredo"
+            checked={sauceChoice.sauce === "spinachAlfredo"}
             onChange={onChange}
           />
           Spinach Alfredo

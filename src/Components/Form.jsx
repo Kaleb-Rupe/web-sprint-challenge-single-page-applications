@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import Toppings from "./Toppings";
 import OrderName from "./OrderName";
 import Size from "./Size";
@@ -15,6 +15,9 @@ export default function Form(props) {
       <Sauce />
       <Toppings />
       <Special />
+      <div>
+        <button id="order-button">Add to Order</button>
+      </div>
     </div>
   );
 }
