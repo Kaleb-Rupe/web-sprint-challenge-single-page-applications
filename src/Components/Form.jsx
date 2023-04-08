@@ -3,24 +3,9 @@ import Toppings from "./Toppings";
 import OrderName from "./OrderName";
 import Size from "./Size";
 import Sauce from "./Sauce";
+import Special from "./Special";
 
 export default function Form(props) {
-  const [user, setUser] = useState({
-    specialInstructions: "",
-  });
-
-  const onChange = (evt) => {
-    setUser({ ...user, [evt.target.name]: evt.target.value });
-    console.log(evt.target);
-  };
-
-  const onSubmit = (evt) => {
-    evt.preventDefault();
-    setUser({
-      specialInstructions: "",
-    });
-  };
-
   return (
     <div>
       <header>Build Your Own Pizza</header>
@@ -29,18 +14,7 @@ export default function Form(props) {
       <Size />
       <Sauce />
       <Toppings />
-      <form onSubmit={onSubmit}>
-        <label>
-          <h2>Special Instructions</h2>
-          <input
-            id="special-text"
-            name="specialInstructions"
-            type="text"
-            value={user.specialInstructions}
-            onChange={onChange}
-          />
-        </label>
-      </form>
+      <Special />
     </div>
   );
 }
